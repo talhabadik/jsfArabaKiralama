@@ -1,0 +1,176 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".dropdown img.flag").addClass("flagvisibility");
+
+                $(".dropdown dt a").click(function () {
+                    $(".dropdown dd ul").toggle();
+                });
+
+                $(".dropdown dd ul li a").click(function () {
+                    var text = $(this).html();
+                    $(".dropdown dt a span").html(text);
+                    $(".dropdown dd ul").hide();
+                    $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                });
+
+                function getSelectedValue(id) {
+                    return $("#" + id).find("dt a span.value").html();
+                }
+
+                $(document).bind('click', function (e) {
+                    var $clicked = $(e.target);
+                    if (!$clicked.parents().hasClass("dropdown"))
+                        $(".dropdown dd ul").hide();
+                });
+
+
+                $("#flagSwitcher").click(function () {
+                    $(".dropdown img.flag").toggleClass("flagvisibility");
+                });
+            });
+        </script>
+        <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script> 
+        <link rel="stylesheet" href="../css/global.css"></link>
+        <script src="../js/slides.min.jquery.js"></script>
+        <script>
+            $(function () {
+                $('#products').slides({
+                    preload: true,
+                    preloadImage: 'img/loading.gif',
+                    effect: 'slide, fade',
+                    crossfade: true,
+                    slideSpeed: 350,
+                    fadeSpeed: 500,
+                    generateNextPrev: true,
+                    generatePagination: false
+                });
+            });
+        </script>
+    </h:head>
+    <h:body>
+        <ui:composition template="sayfa/masterpage.xhtml">
+            <ui:define name="title">ArabaKirala</ui:define>
+            <ui:define name="content">
+                <div class="header-bottom">
+                    <div class="wrap">
+                        <div class="single">
+                            <div class="box_wrapper"><h1>Long Term Business</h1></div>
+                            <div class="single-top"> 	
+                                <div class="lsidebar span_1_of_s">
+                                    <div id="container">
+                                        <div id="products_example">
+                                            <div id="products">
+                                                <div class="slides_container" style="overflow: hidden;display: block;position: relative;">
+                                                    <div class="slides_control" style="left: -582px; width: 1746px; height: 208px; position: relative;">
+                                                        <a href="#" target="_blank" style="left:582px;top:0px;position: absolute;z-index: 5"><img src="../images/pic10.jpg" alt=" " /></a>
+                                                        <a href="#" target="_blank" ><img src="../images/pic9.jpg" alt=" " /></a>
+                                                        <a href="#" target="_blank"><img src="../images/pic8.jpg" alt=" " /></a>					
+                                                        <a href="#" target="_blank"><img src="../images/pic11.jpg" alt=" " /></a>
+                                                        <a href="#" target="_blank"><img src="i../mages/pic12.jpg" alt=" " /></a>
+                                                        <a href="#" target="_blank"><img src="../images/pic13.jpg" alt=" " /></a>
+                                                    </div>
+                                                </div>
+                                                <ul class="pagination">
+                                                    <li><a href="#"><img src="../images/t-pic10.jpg" alt=" "></img></a></li>
+                                                    <li><a href="#"><img src="../images/t-pic9.jpg" alt=" "></img></a></li>
+                                                    <li><a href="#"><img src="../images/t-pic8.jpg" alt=" "></img></a></li>
+                                                    <li><a href="#"><img src="../images/t-pic11.jpg" alt=" "></img></a></li>
+                                                    <li><a href="#"><img src="../images/t-pic12.jpg" alt=" "></img></a></li>
+                                                    <li><a href="#"><img src="../images/t-pic13.jpg" alt=" "></img></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid span_2_of_3">
+                                    <p>
+
+                                        //araba bilgilerini gireceez...
+
+
+                                    </p>
+
+
+
+
+
+                                </div><div class="clear"></div> 
+                            </div>
+                            <p class="about-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.aliquam erat vol.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit </p><div class="clear"></div>
+
+                            <div class="team">
+
+
+                                <div class="leave-comment"><a href="#" name="comment">Araba Kiralama Formu</a></div>
+                                <div class="comments-area">
+
+                                    <h:form>
+
+
+                                        <label>Ad</label>
+                                        <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.ad}"></h:inputText>
+                                  
+                                       
+                                        <p>
+                                            <label>Soyad</label>
+                                            <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.soyad}"></h:inputText>
+                                            
+                                        </p>
+                                        <p>
+                                            <label>E-mail</label>
+                                            <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.email}"></h:inputText>
+                                            
+                                        </p>
+
+                                        <p>
+                                            <label>Telefon Numarası</label>
+                                            <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.telefon}"></h:inputText>
+
+                                       
+                                        </p>
+                                        <p>
+                                            <label>Başlangıç Tarihi:</label>
+                                            <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.baslangicTarihi}"></h:inputText>
+                                         
+                                        </p>
+                                        <p>
+                                            <label>Bitiş Tarihi</label>
+                                            <h:inputText  required="true" class="textbox" value="#{kiralamaBean.k2.bitisTarihi}"></h:inputText>
+                                           
+                                        </p>
+
+                                        <h:commandButton value="Kirala" action="#{kiralamaBean.kaydol}"></h:commandButton>
+
+                                    </h:form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

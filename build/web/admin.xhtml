@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title></title>
+    </h:head>
+
+    <h:body>
+        <ui:composition template="sayfa/masterpage.xhtml">
+
+            <ui:define name="title">admin</ui:define>
+            <ui:define name="content">
+
+                <h:form>
+                    <h:commandButton action="#{kullaniciBean.kullaniciListele}" value="Listele" class="gallery-button"></h:commandButton>
+                    <p:dataTable var="kull" value="#{kullaniciBean.klist}">
+                        <p:column headerText="KullaniciAdi">
+                            <h:outputText value="#{kull.kullaniciAdi}" />
+                        </p:column>
+
+                        <p:column headerText="Sifre">
+                            <h:outputText value="#{kull.sifre}" />
+                        </p:column>
+
+                        <p:column headerText="KAdi">
+                            <h:outputText value="#{kull.KAdi}" />
+                        </p:column>
+
+                        <p:column headerText="KSadi">
+                            <h:outputText value="#{kull.KSadi}" />
+                        </p:column>
+
+                        <p:column headerText="Email">
+                            <h:outputText value="#{kull.email}" />
+                        </p:column>
+
+                        <p:column headerText="Yetki">
+                            <h:outputText value="#{kull.yetki}" />
+                        </p:column>
+                            
+                       
+                  </p:dataTable>
+                   
+                    <h:panelGrid style="padding-top: 8px" width="400">
+                        Arabafiyat:<h:inputText value="#{arabaBean.araba.afiyat}"></h:inputText>
+                        Marka:<h:inputText value="#{arabaBean.araba.marka}"></h:inputText>
+                        Model:<h:inputText value="#{arabaBean.araba.model}"></h:inputText>
+                        Yakit türü:<h:inputText value="#{arabaBean.araba.modelYili}"></h:inputText>
+                        Araba sinifi:<h:inputText value="#{arabaBean.araba.yakit}"></h:inputText>
+                        Renk:<h:inputText value="#{arabaBean.araba.sinif}"></h:inputText>
+                        Model yılı:<h:inputText value="#{arabaBean.araba.renk}"></h:inputText>
+                        Vites:<h:inputText value="#{arabaBean.araba.vites}"></h:inputText>
+                      
+                        
+                    </h:panelGrid>
+                    <table>
+                        <tr style="">
+                         
+                            <td><h:commandButton value="kaydet" action="#{arabaBean.arabaKaydet}"></h:commandButton></td>
+                       
+                        </tr>
+                        </table>
+                   
+                    
+
+
+
+
+
+
+                </h:form>
+
+
+
+
+
+            </ui:define>
+        </ui:composition>
+
+    </h:body>
+
+
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+
+    </h:head>
+    <h:body>
+        <ui:composition template="sayfa/masterpage.xhtml">
+            <ui:define name="title"></ui:define>
+            <ui:define name="content">
+                <div class="header-bottom">
+                    <div class="wrap">
+                        <div class="single">
+                            <div class="heading">
+                                <h3>İLETİŞİM BİLGİLERİMİZ</h3>
+                                 <div class="map">
+							<figure>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25231.524227561185!2d30.55567248724639!3d37.767992644036056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2s!4v1426607098501" width="500" height="500" frameborder="0" style="border:0"></iframe>
+							</figure>
+                                     <div class="col span_1_of_3">
+                                    <div class="company_address">
+                                        <h3>Adres</h3>
+                                        <p>Aksu Caddesi Özler Sitesi No.33/2-C</p>
+                                        <p>Merkez / Isparta</p>
+                                        <p>Turkey</p>
+                                        <p>Phone:(00) 222 666 444</p>
+                                        <p>Fax: (000) 000 00 00 0</p>
+                                        <p>Email: <span>info@carpark.com</span></p>
+                                        <p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+                                    </div>
+                                </div>
+						</div>
+                                
+                            </div>
+                            <div class="section group">
+                                <div class="col span_2_of_contact">
+                                    <div class="contact-form">
+
+                                        <form method="post" action="contact-post.html">
+                                            <div>
+                                                <span><label>Ad</label></span>
+                                                <span><input name="userName" type="text" class="textbox"></input></span>
+                                            </div>
+                                            <div>
+                                                <span><label>E-Mail</label></span>
+                                                <span><input name="userEmail" type="text" class="textbox"></input></span>
+                                            </div>
+
+                                            <div>
+                                                <span><label>KONU</label></span>
+                                                <span><textarea name="userMsg"> </textarea></span>
+                                            </div>
+                                            <div>
+                                                <span><input type="submit" value="Submit"></input></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <div class="clear"></div> 
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </ui:define>
+
+
+        </ui:composition>
+    </h:body>
+
+
+
+
+
+</html>

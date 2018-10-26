@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <ui:composition template="sayfa/masterpage.xhtml">
+            <ui:define name="title">Kaydol</ui:define>
+            <ui:define name="content">
+
+
+
+                        <h:form class="contact-form"> 
+                    
+                       <p>Kullanıcı adı:</p>
+                       <h:inputText  required="true" class="textbox" value="#{kullaniciBean.k1.kullaniciAdi}"></h:inputText>
+                  
+
+                    
+                        <p>Şifre:</p>
+                        <h:inputSecret  required="true" class="textbox" value="#{kullaniciBean.k1.sifre}"></h:inputSecret>
+
+                    
+
+                    
+                        <p> adı:</p>
+                        <h:inputText   required="true" class="textbox" value="#{kullaniciBean.k1.KAdi}"></h:inputText> 
+                    
+                    
+                         <p>Soyadı:</p>
+                        <h:inputText  required="true" class="textbox" value="#{kullaniciBean.k1.KSadi}"></h:inputText>
+                    
+                    
+                         <p>Email:</p>
+                        <h:inputText required="true" class="textbox" value="#{kullaniciBean.k1.email}"></h:inputText>
+                   
+                
+                    
+                       
+        
+
+                    <h:commandButton value="Kaydet" action="#{kullaniciBean.kaydol}"></h:commandButton>
+                  </h:form>
+                      
+                    
+                    
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </ui:define>
+        </ui:composition>
+
+
+
+    </h:body>
+</html>
