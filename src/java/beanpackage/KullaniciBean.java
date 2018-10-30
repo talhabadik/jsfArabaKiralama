@@ -88,14 +88,14 @@ public class KullaniciBean implements Serializable{
                 k.setYetki(rs.getInt("Yetki"));
           }
          if(k.getKullaniciAdi().equals(getKullaniciAdi())&& k.getSifre().equals(getSifre()) && k.getYetki()==1)
-         {
-           sonuc="admin"; 
+            {
+           sonuc="admin"; //Admin paneline girebilmek için kullanıcı adı:admin sifre:admin
              
             }   
             
          else if(k.getKullaniciAdi().equals(getKullaniciAdi())&& k.getSifre().equals(getSifre()) && k.getYetki()==0)
          {
-          sonuc="Arabalar";   
+          sonuc="Arabalar";   //Kullanıcı adı ve Şifresini doğru giren kullanıcı arabalar sayfasına 
          }
            
             else

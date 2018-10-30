@@ -29,7 +29,7 @@ public class KiralamaBean implements Serializable{
         try {
             baglanti b=new baglanti();
             Connection c=b.baglan();
-            String sorgu="Insert into kiralama(Ad,Soyad,Email,Telefon,BaslangicTarih,BitisTarihi) values(?,?,?,?,?,?)";
+            String sorgu="Insert into kiralama(Ad,Soyad,Email,Telefon,BaslangicTarihi,BitisTarihi) values(?,?,?,?,?,?)";
             PreparedStatement ps;
             ps=c.prepareStatement(sorgu);
            ps.setString(1,k2.getAd());
@@ -38,6 +38,7 @@ public class KiralamaBean implements Serializable{
            ps.setInt(4,k2.getTelefon());
            ps.setString(5,k2.getBaslangicTarihi());
            ps.setString(6,k2.getBitisTarihi());
+           ps.executeUpdate();
         } catch (SQLException ex) {
                     System.out.println(ex.getMessage());
 
